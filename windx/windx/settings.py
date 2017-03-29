@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'windx.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'project1',
-        'USER': 'harut',
-        'PASSWORD': 'Harut123321',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'ghubas',
+        'USER': 'ghubo',
+        'PASSWORD': '12365479',
+        'HOST': '166.62.28.93',
+        'PORT': '3306',
     }
 }
 
