@@ -2,6 +2,8 @@ from django.contrib.auth.models import User
 from django.db import models
 import os
 
+from django import forms
+
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
@@ -19,9 +21,19 @@ class UserId(models.Model):
     def __str__(self):
         return self.name + ' (' + str(self.user_id) + ')'
 
+
 class Employee(models.Model):
     date = models.DateTimeField()
     entry_id = models.CharField(max_length=200)
+
+
+class QueryForm(forms.Form):
+    name = forms.CharField(label='Enter name', max_length=100)
+    date = forms.DateField()
+    checkbox = forms.CheckboxInput()
+
+
+
 
 
 # emp1 = Employee(date="2017-10-17 10:10", entry_id="out122558")

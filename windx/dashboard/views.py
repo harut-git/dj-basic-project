@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
+from models import QueryForm
 
 def home(request):
     return render(request, 'dashboard.html')
 
 
 def dashboard(request):
-    context = {'active_tab': 'dashboard'}
+    form = QueryForm(request.GET)
+    context = {'active_tab': 'dashboard', 'form': form}
+    print request.GET.get('name')
     return render(request, 'dashboardTemplates/dashboard.html', context=context)
 
 
