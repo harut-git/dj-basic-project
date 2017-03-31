@@ -1,0 +1,11 @@
+{% extends 'dashboardTemplates/datetime.html' %}
+ {% block results %}
+<div id="results">
+    {% for key, value in results.items %}
+    <h1>{{key}}</h1>
+    <p>{{value}}</p>
+    {% endfor %}
+
+</div>
+
+        {% endblock %}
