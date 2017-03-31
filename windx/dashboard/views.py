@@ -16,3 +16,9 @@ def dashboard(request):
 def user(request):
     context = {'active_tab': 'user'}
     return render(request, 'dashboardTemplates/user.html', context=context)
+
+
+def index(request):
+    form = QueryForm(request.GET)
+    context = {'form': form}
+    return render(request, 'dashboardTemplates/datetime.html', context=context)
