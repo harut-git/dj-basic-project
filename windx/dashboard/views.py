@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from models import QueryForm
 
+
 def home(request):
     return render(request, 'dashboard.html')
 
