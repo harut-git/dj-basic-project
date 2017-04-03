@@ -16,7 +16,7 @@ class Article(models.Model):
 
 class UserId(models.Model):
     name = models.CharField(max_length=200)
-    user_id = models.IntegerField()
+    user_id = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name + ' (' + str(self.user_id) + ')'
@@ -42,11 +42,10 @@ class QueryForm(forms.Form):
 #     lines = outfile.readlines()
 #     for i in range(len(lines)):
 #         if lines[i].rstrip() == "*":
-#             if lines[i + 1].rstrip() == '3' and lines[i + 2].rstrip() == '24':
+#             if lines[i + 1].rstrip() == '3':
 #                 current_employee = Employee(
 #                     date='2017-' + lines[i + 1].rstrip() + '-' + lines[i + 2].rstrip() + ' ' + lines[
 #                         i + 3].rstrip() + ':' + lines[i + 4].rstrip(),
 #                     entry_id=lines[i + 5].rstrip())
 #                 current_employee.save()
 
-#
