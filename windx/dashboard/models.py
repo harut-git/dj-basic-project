@@ -21,7 +21,7 @@ class Employee(models.Model):
     hour = models.CharField(max_length=100)
     minute = models.CharField(max_length=100)
     entry_id = models.CharField(max_length=200)
-    action = models.CharField(max_length=100)
+    action = models.CharField(max_length=100, default='unknown')
 
 
 class UserId(models.Model):
